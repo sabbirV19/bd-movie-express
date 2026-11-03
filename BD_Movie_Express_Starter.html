@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="BD Movie Express — নতুন সিনেমার তথ্য, রিলিজ ডেট, রেটিং ও অফিসিয়াল ট্রেলার।">
+<title>BD Movie Express | Movie Information & Trailers</title>
+<style>
+:root{--bg:#090b10;--panel:#121722;--muted:#aab2c0;--red:#e11d48;--line:#252d3a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#f7f8fb;font-family:Arial,"Noto Sans Bengali",sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 18px}
+header{background:#0d1119;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:21px;font-weight:900;letter-spacing:.3px}.logo b{color:var(--red)}
+nav{display:flex;gap:18px;color:#d5dae3;font-size:14px}nav a:hover{color:#fb7185}
+.hero{padding:46px 0 34px;background:radial-gradient(ellipse at 80% 20%,#511326 0,transparent 40%),linear-gradient(120deg,#141a26,#090b10)}
+.kicker{color:#fb7185;font-size:12px;font-weight:bold;letter-spacing:2px}
+h1{font-size:clamp(30px,6vw,52px);line-height:1.12;margin:12px 0}.hero p{color:#c0c7d2;max-width:620px;line-height:1.7}
+.searchrow{display:flex;gap:9px;max-width:620px;margin-top:22px}.searchrow input{flex:1;min-width:0;padding:14px 15px;border-radius:9px;border:1px solid #394253;background:#111722;color:white;font-size:15px}
+button,.btn{border:0;border-radius:9px;background:var(--red);color:white;padding:13px 17px;font-weight:bold;cursor:pointer}
+.tabs{display:flex;gap:9px;overflow:auto;padding:22px 0}.tab{white-space:nowrap;border:1px solid var(--line);padding:9px 14px;border-radius:30px;color:#cbd2dd;background:#111722;cursor:pointer}.tab.active,.tab:hover{background:var(--red);border-color:var(--red);color:white}
+.sectionhead{display:flex;align-items:end;justify-content:space-between;margin:14px 0 18px}.sectionhead h2{font-size:22px;margin:0}.sectionhead span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;padding-bottom:38px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#743044}
+.poster{height:235px;display:flex;align-items:end;padding:14px;position:relative;background:linear-gradient(145deg,#24334b,#7f1d3d)}
+.poster:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent 70%)}
+.poster .postertext{position:relative;font-size:22px;font-weight:900;text-shadow:0 2px 8px #000}
+.p2{background:linear-gradient(145deg,#123a45,#bd5b22)}.p3{background:linear-gradient(145deg,#35265f,#b02c50)}.p4{background:linear-gradient(145deg,#263d29,#9b7831)}.p5{background:linear-gradient(145deg,#172d52,#3e83a8)}.p6{background:linear-gradient(145deg,#4b1f25,#d18a38)}.p7{background:linear-gradient(145deg,#2b294b,#7772a8)}.p8{background:linear-gradient(145deg,#253b3b,#8b4141)}
+.info{padding:13px}.info h3{font-size:16px;margin:0 0 8px}.meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.tag{display:inline-block;margin-top:10px;font-size:11px;color:#fecdd3;background:#4a1527;padding:5px 8px;border-radius:5px}
+.details{display:none;padding:0 13px 14px;color:#c3cad5;font-size:13px;line-height:1.55}.details p{margin:0 0 10px}.details button{padding:9px 12px;font-size:12px}
+.empty{display:none;color:var(--muted);padding:25px 0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13px;line-height:1.7}footer strong{color:white}
+.modal{display:none;position:fixed;inset:0;background:#000c;z-index:10;align-items:center;justify-content:center;padding:18px}.modalbox{width:min(680px,100%);background:#111722;border:1px solid #394253;border-radius:14px;padding:18px}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.close{background:#303949;padding:8px 12px}.videoarea{aspect-ratio:16/9;background:#080b11;border-radius:9px;display:grid;place-items:center;text-align:center;color:#cbd2dd;padding:20px}
+@media(max-width:850px){.grid{grid-template-columns:repeat(3,1fr)}nav{gap:10px}}
+@media(max-width:600px){.nav{height:auto;min-height:62px;flex-wrap:wrap;padding:12px 0}nav{width:100%;overflow:auto;padding-bottom:3px}.hero{padding:34px 0 22px}.grid{grid-template-columns:repeat(2,1fr);gap:11px}.poster{height:190px}.info{padding:10px}.info h3{font-size:14px}.sectionhead h2{font-size:19px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#"><b>BD</b> MOVIE EXPRESS</a><nav><a href="#home">Home</a><a href="#movies">Movies</a><a href="#upcoming">Upcoming</a><a href="#about">About</a></nav></div></header>
+<main id="home">
+<section class="hero"><div class="wrap"><div class="kicker">YOUR DAILY MOVIE DESTINATION</div><h1>Discover Movies.<br><span style="color:#fb7185">Explore Stories.</span></h1><p>নতুন সিনেমার খবর, কাহিনি, অভিনয়শিল্পী, রেটিং, রিলিজের তারিখ এবং অফিসিয়াল ট্রেলার—সব এক জায়গায়।</p><div class="searchrow"><input id="search" type="search" placeholder="মুভির নাম লিখে খুঁজুন..." aria-label="Search movies"><button onclick="filterMovies()">Search</button></div></div></section>
+<div class="wrap"><div class="tabs" id="tabs"><button class="tab active" data-cat="All">All Movies</button><button class="tab" data-cat="Hollywood">Hollywood</button><button class="tab" data-cat="Bollywood">Bollywood</button><button class="tab" data-cat="South Indian">South Indian</button><button class="tab" data-cat="Upcoming">Upcoming</button></div>
+<section id="movies"><div class="sectionhead"><h2>Latest & Featured Movies</h2><span>Movie information & trailers</span></div>
+<div class="grid" id="grid">
+<article class="card" data-cat="Hollywood" data-name="The Wild Horizon"><div class="poster"><div class="postertext">THE WILD<br>HORIZON</div></div><div class="info"><h3>The Wild Horizon</h3><div class="meta"><span>2026 • Action</span><span>★ 8.2</span></div><span class="tag">Hollywood</span></div><div class="details"><p>একটি কাল্পনিক অ্যাকশন সিনেমার নমুনা পরিচিতি। এখানে অফিসিয়াল synopsis, cast ও release date যোগ করুন।</p><button onclick="trailer('The Wild Horizon')">Official Trailer</button></div></article>
+<article class="card" data-cat="Bollywood" data-name="Rang Mahal"><div class="poster p2"><div class="postertext">RANG<br>MAHAL</div></div><div class="info"><h3>Rang Mahal</h3><div class="meta"><span>2026 • Drama</span><span>★ 7.8</span></div><span class="tag">Bollywood</span></div><div class="details"><p>একটি নমুনা সিনেমা কার্ড। প্রকাশের আগে আসল তথ্য দিয়ে পরিবর্তন করুন।</p><button onclick="trailer('Rang Mahal')">Official Trailer</button></div></article>
+<article class="card" data-cat="South Indian" data-name="Vettaiyan Returns"><div class="poster p3"><div class="postertext">VETTAIYAN<br>RETURNS</div></div><div class="info"><h3>Vettaiyan Returns</h3><div class="meta"><span>2026 • Thriller</span><span>★ 8.0</span></div><span class="tag">South Indian</span></div><div class="details"><p>নমুনা তথ্য—নির্ভরযোগ্য সূত্র থেকে যাচাই করা তথ্য বসান।</p><button onclick="trailer('Vettaiyan Returns')">Official Trailer</button></div></article>
+<article class="card" data-cat="Hollywood" data-name="Deep Blue"><div class="poster p4"><div class="postertext">DEEP<br>BLUE</div></div><div class="info"><h3>Deep Blue</h3><div class="meta"><span>2026 • Sci-Fi</span><span>★ 7.9</span></div><span class="tag">Hollywood</span></div><div class="details"><p>নমুনা তথ্য—সিনেমার আসল বিবরণ ও কাস্ট যোগ করুন।</p><button onclick="trailer('Deep Blue')">Official Trailer</button></div></article>
+<article class="card" data-cat="Bollywood" data-name="Safar"><div class="poster p5"><div class="postertext">SAFAR</div></div><div class="info"><h3>Safar</h3><div class="meta"><span>2026 • Romance</span><span>★ 7.5</span></div><span class="tag">Bollywood</span></div><div class="details"><p>নমুনা তথ্য—সঠিক রিলিজ ডেট ও কাহিনি যোগ করুন।</p><button onclick="trailer('Safar')">Official Trailer</button></div></article>
+<article class="card" data-cat="South Indian" data-name="Kaalam"><div class="poster p6"><div class="postertext">KAALAM</div></div><div class="info"><h3>Kaalam</h3><div class="meta"><span>2026 • Action</span><span>★ 8.1</span></div><span class="tag">South Indian</span></div><div class="details"><p>নমুনা তথ্য—অফিসিয়াল উৎস থেকে তথ্য যাচাই করে নিন।</p><button onclick="trailer('Kaalam')">Official Trailer</button></div></article>
+<article class="card" data-cat="Upcoming" data-name="Beyond Tomorrow"><div class="poster p7"><div class="postertext">BEYOND<br>TOMORROW</div></div><div class="info"><h3>Beyond Tomorrow</h3><div class="meta"><span>Coming Soon</span><span>—</span></div><span class="tag">Upcoming</span></div><div class="details"><p>আসন্ন সিনেমার নিশ্চিত রিলিজের তারিখ ও অফিসিয়াল ঘোষণার লিংক যোগ করুন।</p><button onclick="trailer('Beyond Tomorrow')">Official Trailer</button></div></article>
+<article class="card" data-cat="Upcoming" data-name="The Last Kingdom"><div class="poster p8"><div class="postertext">THE LAST<br>KINGDOM</div></div><div class="info"><h3>The Last Kingdom</h3><div class="meta"><span>Coming Soon</span><span>—</span></div><span class="tag">Upcoming</span></div><div class="details"><p>আসন্ন সিনেমার তথ্য প্রকাশের আগে যাচাই করুন।</p><button onclick="trailer('The Last Kingdom')">Official Trailer</button></div></article>
+</div><div class="empty" id="empty">কোনো মুভি পাওয়া যায়নি। অন্য নাম দিয়ে খুঁজুন।</div></section>
+<section id="upcoming" style="padding:8px 0 30px"><div class="sectionhead"><h2>Upcoming Movies</h2><span>Coming soon</span></div><p style="color:var(--muted);font-size:14px">নতুন সিনেমার ঘোষণা ও মুক্তির তারিখ এখানে প্রকাশ করুন।</p></section>
+</div></main>
+<footer id="about"><div class="wrap"><strong>BD MOVIE EXPRESS</strong><br>সিনেমার তথ্য, রিভিউ ও অফিসিয়াল ট্রেলার জানার নির্ভরযোগ্য ঠিকানা।<br><span>Disclaimer: এই ওয়েবসাইটে সিনেমার তথ্য ও অনুমোদিত/অফিসিয়াল ট্রেলারের লিংক প্রকাশ করা হবে। কোনো কপিরাইটযুক্ত পূর্ণ সিনেমা অনুমতি ছাড়া হোস্ট করা হবে না।</span><br>© 2026 BD Movie Express. All rights reserved.</div></footer>
+<div class="modal" id="modal" onclick="if(event.target===this)closeModal()"><div class="modalbox"><div class="modalhead"><strong id="modalTitle">Official Trailer</strong><button class="close" onclick="closeModal()">Close ✕</button></div><div class="videoarea">এখানে সিনেমার অফিসিয়াল YouTube ট্রেলার Embed করুন।<br><small>ট্রেলার যোগ করতে YouTube-এর Share → Embed কোড ব্যবহার করুন।</small></div></div></div>
+<script>
+let current='All';
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');current=b.dataset.cat;filterMovies()}));
+function filterMovies(){let q=document.getElementById('search').value.toLowerCase(),shown=0;document.querySelectorAll('.card').forEach(c=>{let ok=(current==='All'||c.dataset.cat===current)&&c.dataset.name.toLowerCase().includes(q);c.style.display=ok?'block':'none';if(ok)shown++});document.getElementById('empty').style.display=shown?'none':'block'}
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',e=>{if(e.target.tagName==='BUTTON')return;let d=c.querySelector('.details');d.style.display=d.style.display==='block'?'none':'block'}));
+function trailer(name){document.getElementById('modalTitle').textContent=name+' — Official Trailer';document.getElementById('modal').style.display='flex'}
+function closeModal(){document.getElementById('modal').style.display='none'}
+document.getElementById('search').addEventListener('keydown',e=>{if(e.key==='Enter')filterMovies()});
+</script>
+</body></html>
